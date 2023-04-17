@@ -39,38 +39,42 @@ class BinarySearchTree {
   }
 
   has(value) {
-    return findValueExist(this.root, value);
-
-    function findValueExist(node, value) {
-      if (!node) {
-        return false;
-      }
-
-      if (node.value === value) {
-        return true;
-      }
-
-      return value < node.value ?
-        findValueExist(node.left, value) :
-        findValueExist(node.right, value);
+    if (this.find(value)) {
+      return true;
+    } else {
+      return false;
     }
   }
 
   find(value) {
-    this.root = searchTree(this.root, value);
+    if(!this.root) return null;
+    let currNode = this.root;
 
-    function searchTree(node, value) {
-      if (!node) {
-        return undefined
-      } else if (value < node.value) {
-        return this.searchTree(node.left, value)
-      } else if (value > node.value) {
-        return this.searchTree(node.right, value)
-      } else {
-        return node;
+    while(true) {
+      if(currNode.value === value) {
+        return currNode;
+      } else if (currNode.value > value) {
+        if(!currNode.left) return null;
+        currNode = currNode.left;
+      } else if (currNode.value < value) {
+        if(!currNode.right) return null;
+        currNode = currNode.right;
       }
-
     }
+    // this.root = searchTree(this.root, value);
+
+    // function searchTree(node, value) {
+    //   if (!node) {
+    //     return undefined
+    //   } else if (value < node.value) {
+    //     return this.searchTree(node.left, value)
+    //   } else if (value > node.value) {
+    //     return this.searchTree(node.right, value)
+    //   } else {
+    //     return node;
+    //   }
+
+    // }
     // throw new NotImplementedError('Not implemented');
     // // remove line with error and write your code here
   }

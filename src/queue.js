@@ -15,7 +15,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 class Queue {
   constructor() {
-    this.items = {}
+    this.items = {};
     this.frontIndex = 0
     this.backIndex = 0
   }
