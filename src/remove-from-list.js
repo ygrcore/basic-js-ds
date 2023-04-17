@@ -29,7 +29,6 @@ function removeKFromList(l, k) {
   if(l.next) {
     l.next = removeKFromList(l.next, k);
   }
-
   if(l.value !== k) {
     return l;
   } else if (l.next) {

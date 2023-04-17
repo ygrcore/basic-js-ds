@@ -61,20 +61,7 @@ class BinarySearchTree {
         currNode = currNode.right;
       }
     }
-    // this.root = searchTree(this.root, value);
 
-    // function searchTree(node, value) {
-    //   if (!node) {
-    //     return undefined
-    //   } else if (value < node.value) {
-    //     return this.searchTree(node.left, value)
-    //   } else if (value > node.value) {
-    //     return this.searchTree(node.right, value)
-    //   } else {
-    //     return node;
-    //   }
-
-    // }
     // throw new NotImplementedError('Not implemented');
     // // remove line with error and write your code here
   }
