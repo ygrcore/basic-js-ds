@@ -27,6 +27,13 @@ function removeKFromList(/* l, k */) {
   // remove line with error and write your code here
 }
 
+class ListNode {
+  constructor(x) {
+    this.value = x;
+    this.next = null;
+  }
+}
+
 module.exports = {
   removeKFromList
 };
